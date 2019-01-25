@@ -17,8 +17,10 @@ class CreateShopsTable extends Migration
             $table->increments('id');
             $table->string("name")->comment("This is the name of the shop");
             $table->string("address")->comment("This is the address of the shop");
-            $table->float("lat")->comment("This is the latitude of the shop");
-            $table->float("lng")->comment("This is the longitude of the shop");
+            $table->double("lat")->comment("This is the latitude of the shop");
+            $table->double("lng")->comment("This is the longitude of the shop");
+            $table->integer("like_count")->default(0)->comment("This is the like count of the shop");
+            $table->integer("dislike_count")->default(0)->comment("This is the dislike count of the shop");
             $table->timestamps();
         });
     }

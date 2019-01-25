@@ -25,4 +25,6 @@ Route::group([
     Route::post('sendPasswordResetLink', 'ResetPasswordController@sendEmail');
     Route::post('resetPassword', 'ChangePasswordController@process');
     Route::get('shops', 'ShopController@index');
+    Route::post('like/{id}', 'ShopController@like');
+    Route::post('dislike/{id}', 'ShopController@dislike');
 });
